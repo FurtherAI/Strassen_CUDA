@@ -8,6 +8,8 @@ It includes some optimizations for speed (utilizes shared memory, warp primitive
 
 It does not optimize memory so there are probably significantly more memory efficient implementations. This one utilizes about 3 times the sum of memory used for the two input matrices and the output matrix.
 
+NOTE: it doesn't utilize tensor cores or lower precision operations so there's a lot of opportunity for improved speed there.
+
 # Compiling and Running It
 ```bash
 nvcc -o mm strassen.cu
